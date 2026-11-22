@@ -69,3 +69,7 @@ def main() -> None:
     tarea.iniciar()
     print(f"Tarea creada: {tarea.titulo} | Estado: {tarea.estado}")
     usuario.consultar_tareas()
+
+
+if __name__ == "__main__":
+    main()

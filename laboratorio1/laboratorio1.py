@@ -59,3 +59,17 @@ class Proyecto:
         for tarea in self.tareas:
             responsable = tarea.responsable.nombre if tarea.responsable else "Sin responsable"
             print(f"- {tarea.titulo} ({tarea.estado}) — Responsable: {responsable}")
+
+
+def main() -> None:
+    proyecto = Proyecto("TaskFlow")
+    usuario = Usuario("Ana")
+    tarea = proyecto.crear_tarea("Diseñar interfaz", usuario)
+    usuario.recibir_tarea(tarea)
+    tarea.iniciar()
+    print(f"Tarea creada: {tarea.titulo} | Estado: {tarea.estado}")
+    usuario.consultar_tareas()
+
+
+if __name__ == "__main__":
+    main()
